@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> demanded navbar </title>
+    <style>
+.active{
+        background-color: #04AA6D;
+}#navbar{
+        width: 100%;
+        border:1px solid black;
+        display: flex;
+align-items: center;    
+background-color: black;
+color: white;
+font-size: 20px;
+}#navbar>div{
+        border: 1px solid black;
+}
+.dropdown-content{
+display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}#drpbutton{
+        display: block;
+color: white;
+font-size: 20px;    
+}.dropdown:hover .dropdown-content{
+/* it basically means on hover over dropdown div do this to drop-content */
+display: block;
+}.dropdown-content>a{
+        display: block;
+}.dropdown{
+        width: 150px;
+}.icon{
+display: none;       
+}#navbar>a{
+    margin: 20px;
+    color: white;
+}.active{
+    height: 100%;
+}
+/* media queries for normal screen */
+@media screen and (max-width:600px) {
+#navbar a:not(:first-child), .dropdown {
+    display: none;
+}.navbar .icon{
+    float: right;
+    display: block;
+}     
+
+}
+    </style>
+</head>
+<body>
+<!--most demanded navbar. so lets do this.-->
+<div id="navbar">
+<a href="" class="active">Home</a>
+<a href="">News</a>
+<a href="">Contact</a>
+<div class="dropdown">
+    <button id="drpbutton">Dropdown
+        <i class="fa fa-caret-down"></i>    
+</button>
+<div class="dropdown-content">
+ <a href="">Link1</a>
+ <a href="">Link2</a>
+ <a href="">Link3</a>   
+</div>
+</div>
+<a href="#about">About</a>
+<a href="" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+</body>
+</html>
+<!-- steps to make a responsive navbar -->
+<!-- first make a simple navbar no responsiveness. and after that-->
+<!-- use media queries to make it responsive.-->
+<!-- for small screen we have two css(remember this thing) -->
