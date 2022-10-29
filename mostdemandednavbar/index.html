@@ -9,7 +9,7 @@
     <style>
 .active{
         background-color: #04AA6D;
-}#navbar{
+}.topnav{
         width: 100%;
         border:1px solid black;
         display: flex;
@@ -17,7 +17,7 @@ align-items: center;
 background-color: black;
 color: white;
 font-size: 20px;
-}#navbar>div{
+}.topnav>div{
         border: 1px solid black;
 }
 .dropdown-content{
@@ -38,9 +38,9 @@ display: block;
         display: block;
 }.dropdown{
         width: 150px;
-}.icon{
+}#icon{
 display: none;       
-}#navbar>a{
+}.topnav>a{
     margin: 20px;
     color: white;
 }.active{
@@ -48,19 +48,37 @@ display: none;
 }
 /* media queries for normal screen */
 @media screen and (max-width:600px) {
-#navbar a:not(:first-child), .dropdown {
-    display: none;
-}.navbar .icon{
-    float: right;
+.topnav a:not(:first-child), .dropdown #drpbutton {
+display: none;
+}#icon{
+display:block ;
+color: aliceblue;
+}.topnav>a:last-child{
     display: block;
-}     
+    position: absolute;
+    right: 0px;
+}.dropdown-content>a{
+    display: none;
+}#drpbutton{
+    display: none;
+}
+}@media screen and (max-width:600px){
+   .responsive a:not(:first-child) {
+display: block;
+}.topnav>a:last-child{
+    display: block;
+    position: absolute;
+    right: 0px;
+} #drpbutton{
+    display: block;
+}
 
 }
     </style>
 </head>
 <body>
 <!--most demanded navbar. so lets do this.-->
-<div id="navbar">
+<div id="navbar" class="topnav">
 <a href="" class="active">Home</a>
 <a href="">News</a>
 <a href="">Contact</a>
@@ -75,12 +93,13 @@ display: none;
 </div>
 </div>
 <a href="#about">About</a>
-<a href="" class="icon" onclick="myFunction()">&#9776;</a>
+<a href="" id="icon" >&#9776;</a>
 </div>
 
 </body>
 </html>
-<!-- steps to make a responsive navbar -->
-<!-- first make a simple navbar no responsiveness. and after that-->
-<!-- use media queries to make it responsive.-->
-<!-- for small screen we have two css(remember this thing) -->
+<script src="index.js"></script>
+<!--steps to make a responsive navbar -->
+<!--first make a simple navbar no responsiveness. and after that-->
+<!--use media queries to make it responsive.-->
+<!--for small screen we have two css(remember this thing)-->
