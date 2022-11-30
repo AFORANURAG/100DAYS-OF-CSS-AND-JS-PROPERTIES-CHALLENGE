@@ -57,22 +57,22 @@ color: aliceblue;
     display: block;
     position: absolute;
     right: 0px;
-}.dropdown-content>a{
+}     .dropdown-content>a{
     display: none;
-}#drpbutton{
+}.dropdown{
     display: none;
 }
 }@media screen and (max-width:600px){
-   .responsive a:not(:first-child) {
+   .responsive a:not(:first-child), .dropdown #drpbutton {
 display: block;
 }.topnav>a:last-child{
     display: block;
     position: absolute;
     right: 0px;
-} #drpbutton{
-    display: block;
 }
-
+.dropdown{
+    display: block;
+}    
 }
     </style>
 </head>
@@ -99,7 +99,7 @@ display: block;
 </body>
 </html>
 <script src="index.js"></script>
-<!--steps to make a responsive navbar -->
-<!--first make a simple navbar no responsiveness. and after that-->
-<!--use media queries to make it responsive.-->
-<!--for small screen we have two css(remember this thing)-->
+<!-- steps to make a responsive navbar -->
+<!-- first make a simple navbar no responsiveness. and after that-->
+<!-- use media queries to make it responsive.-->
+<!-- for small screen we have two css(remember this thing) -->
